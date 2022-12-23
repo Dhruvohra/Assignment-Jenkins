@@ -15,7 +15,7 @@ elif server_type == 'smtp.mail.yahoo.com':
 sender_address = os.environ['Sender']
 sender_password = os.environ['Sender_pass']
 recipient_address = os.environ['Recipient']
-email_content = os.environ['email_message']
+email_content = str(os.environ['email_message'])
 
 
 print("content" ,email_content)
@@ -34,5 +34,5 @@ server.starttls()
 server.login(sender_address, sender_password)
 #Gmail Dummy creds for app.
 
-server.sendmail(sender_address, recipient_address, 'Mail sent from python script run via jenkins using gmail smtp server')
+server.sendmail(sender_address, recipient_address, email_content)
 # This is taking 3 Parameters as arguments as of now Sender Address, recipient Address, Email Body.
