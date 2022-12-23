@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh 'git status'
         echo 'Printing Files'
-        ls
+        sh ls
         sh 'python3 --version'
       }
     }
