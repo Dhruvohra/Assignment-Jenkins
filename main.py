@@ -15,7 +15,7 @@ elif server_type == 'smtp.mail.yahoo.com':
 sender_address = os.environ['Sender']
 sender_password = os.environ['Sender_pass']
 recipient_address = os.environ['Recipient']
-email_content = str(os.environ['email_message'])
+email_content = os.environ['Email_message']
 
 server = smtplib.SMTP(server_type, port)
 print('Establishing server connection')
