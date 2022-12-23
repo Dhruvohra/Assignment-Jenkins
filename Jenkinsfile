@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Run Script') {
       steps {
-        sh 'python3 email.py'
+        sh 'python3 main.py'
       }
     }
   }
