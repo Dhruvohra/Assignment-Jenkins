@@ -18,6 +18,9 @@ recipient_address = os.environ['Recipient']
 email_content = os.environ['email_message']
 
 
+print(os.environ['email_message'])
+print(type(os.environ['email_message']))
+
 
 server = smtplib.SMTP(server_type, port)
 #Hardcoding Server Details
