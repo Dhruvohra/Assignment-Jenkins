@@ -3,9 +3,6 @@ pipeline {
     stages {
     stage('Version Check') {
       steps {
-        sh 'git status'
-        echo 'Printing Files'
-        sh ls
         sh 'python3 --version'
       }
     }
