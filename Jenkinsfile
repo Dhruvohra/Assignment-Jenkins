@@ -1,21 +1,15 @@
 pipeline {
     agent any
-
     stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
+    stage('Version Check') {
+      steps {
+        sh 'python3 --version'
+      }
     }
+    stage('Run Script') {
+      steps {
+        sh 'python3 email.py'
+      }
+    }
+  }
 }
