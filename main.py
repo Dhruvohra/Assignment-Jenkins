@@ -15,8 +15,8 @@ elif server_type == 'smtp.mail.yahoo.com':
 sender_address = os.environ['Sender']
 sender_password = os.environ['Sender_pass']
 recipient_address = os.environ['Recipient']
-message = os.environ['Email_message']
-email_content = str(message)
+message = os.environ['Message']
+
 
 server = smtplib.SMTP(server_type, port)
 print('Establishing server connection')
@@ -30,6 +30,6 @@ server.login(sender_address, sender_password)
 print('Logged into the Senders account')
 #Gmail Dummy creds for app.
 
-server.sendmail(sender_address, recipient_address,email_content)
+server.sendmail(sender_address, recipient_address, message)
 print('Email Sent')
 # This is taking 3 Parameters as arguments as of now Sender Address, recipient Address, Email Body.
