@@ -1,6 +1,8 @@
 import smtplib
 #python library to use SMPT protocol for Emails
 
+print(server)
+
 server = smtplib.SMTP('smtp.gmail.com', 587)
 #Hardcoding Server Details
 
