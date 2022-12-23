@@ -18,6 +18,9 @@ recipient_address = os.environ['Recipient']
 email_content = os.environ['email_message']
 
 
+print("content" ,email_content)
+print("type", type(email_content))
+
 print(os.environ['email_message'])
 print(type(os.environ['email_message']))
 
