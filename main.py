@@ -1,4 +1,5 @@
 import smtplib
+import os
 #python library to use SMPT protocol for Emails
 
 print(os.environ['Server'])
