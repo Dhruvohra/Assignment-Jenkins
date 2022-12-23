@@ -30,6 +30,6 @@ server.login(sender_address, sender_password)
 print('Logged into the Senders account')
 #Gmail Dummy creds for app.
 
-server.sendmail(sender_address, recipient_address, message)
+server.sendmail(sender_address, recipient_address, message.as_string())
 print('Email Sent')
 # This is taking 3 Parameters as arguments as of now Sender Address, recipient Address, Email Body.
