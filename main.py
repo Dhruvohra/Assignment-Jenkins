@@ -34,5 +34,5 @@ server.starttls()
 server.login(sender_address, sender_password)
 #Gmail Dummy creds for app.
 
-server.sendmail(sender_address, recipient_address, email_content)
+server.sendmail(sender_address, recipient_address, 'Mail sent from python script run via jenkins using gmail smtp server')
 # This is taking 3 Parameters as arguments as of now Sender Address, recipient Address, Email Body.
